@@ -52,3 +52,52 @@ button{
 .operator{
     color: rgb(227, 76, 16);  
 }
+
+/* Media Query for Tablets and Small Screens (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        width: 85%;
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    input {
+        font-size: 32px;
+        padding: 12px;
+    }
+
+    button {
+        width: 55px;
+        height: 55px;
+        margin: 8px;
+        font-size: 18px;
+    }
+}
+
+/* Media Query for Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 350px;
+        padding: 12px;
+    }
+
+    input {
+        font-size: 28px;
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    button {
+        width: 50px;
+        height: 50px;
+        margin: 6px;
+        font-size: 16px;
+    }
+}
