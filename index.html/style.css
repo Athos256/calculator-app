@@ -1,109 +1,75 @@
-/* Responsive calculator styles — optimized for tablet and phone
-   Updated: 2026-08-30
-*/
-:root{
-    --bg-1: #0a0a0a;
-    --bg-2: #353a42;
-    --accent: #e34c10;
-    --glass: rgba(255,255,255,0.04);
-    --muted-shadow: rgba(220,210,210,0.06);
-}
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-html,body{
-    height: 100%;
-}
-
 body{
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, var(--bg-1), var(--bg-2));
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(45deg, #0a0a0a,#353a42);
 }
-
 .container{
-    width: 360px;               /* good size for desktop/tablet */
-    max-width: 95%;
+    border: 1px solid #353a42 ;
     padding: 20px;
-    border-radius: 14px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border: 1px solid rgba(255,255,255,0.04);
-    box-shadow: 0 6px 24px var(--muted-shadow);
-}
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px, 3px 15px rgba(220, 210, 210, 0.2);
+    width: 400px;
 
-/* Display the button rows as a 4-column grid so layout adapts to width */
-.container > div{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 10px;
 }
 
 input{
     width: 100%;
     border: none;
-    padding: 14px 16px;
-    margin-bottom: 12px;
-    font-size: 2.2rem;           /* big readable numbers */
-    line-height: 1;
+    padding: 16px;
+    margin-bottom: 10px;
+    font-size: 40px;
     background: transparent;
-    box-shadow: inset 0 3px 10px rgba(0,0,0,0.35);
-    color: #ffffff;
-    text-align: right;
-    border-radius: 8px;
-    outline: none;
+     box-shadow: 0px, 3px 15px rgba(218, 217, 217, 0.2);
+     color: #ffff;
+     text-align: right;
+
 }
-
-input::placeholder{ color: rgba(255,255,255,0.6); }
-
+input::placeholder{
+    color: #ffff;
+}
 button{
-    width: 100%;
-    height: 64px;
-    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50px;
     border: none;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,0.02);
-    color: #fff;
-    cursor: pointer;
-    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+    font-size: 20px;
+    justify-items: center;
 }
-
-button:active{ transform: translateY(1px) scale(0.998); }
-button:focus{ outline: 2px solid rgba(227,76,16,0.18); outline-offset: 2px; }
-
 .equal{
-    background-color: var(--accent);
-    color: #fff;
-    box-shadow: 0 6px 18px rgba(227,76,16,0.18);
-}
+    background-color: rgb(227, 76, 16);
 
+}
 .operator{
-    color: var(--accent);
-    background: rgba(227,76,16,0.04);
+    color: rgb(227, 76, 16);  
 }
 
-/* Tablet and small screens (<= 768px): scale down a bit and keep 4-column grid */
-@media (max-width: 768px){
+
+@media(max-width:480px){
     .container{
-        width: 420px;           /* slightly wider on landscape tablets */
-        max-width: 92%;
-        padding: 16px;
+        width: 260px;
+        padding: 10px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
     }
 
-    input{ font-size: 1.9rem; padding: 12px 14px; }
-    button{ height: 58px; font-size: 1.05rem; }
+
+
 }
+
 
 /* Phones (<= 480px): make everything fit and stay comfortable to tap */
 @media (max-width: 480px){
@@ -115,12 +81,7 @@ button:focus{ outline: 2px solid rgba(227,76,16,0.18); outline-offset: 2px; }
         border-radius: 12px;
     }
 
-    /* Use the same 4-column grid but reduce gaps and heights so buttons remain tappable */
-    .container > div{ gap: 8px; }
-    button{ height: 52px; font-size: 1rem; border-radius: 8px; }
-    input{ font-size: 1.6rem; padding: 10px 12px; margin-bottom: 10px; }
-}
-
+   
 /* Very small screens (<= 360px) adjust spacing slightly */
 @media (max-width: 360px){
     .container{ padding: 12px; }
