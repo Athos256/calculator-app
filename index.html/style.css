@@ -53,6 +53,7 @@ button{
 .operator{
     color: rgb(227, 76, 16);  
 }
+/*--mobile---*/
 @media(max-width:480px){
     .container{
         width: 260px;
@@ -68,18 +69,7 @@ button{
 
 }
 
-/* Media Query for Tablets and Small Screens (768px and below) */
-@media (max-width: 768px) {
-    .container {
-        width: 85%;
-        max-width: 320px;
-        padding: 15px;
-    }
 
-    input {
-        font-size: 32px;
-        padding: 12px;
-    }
 
 
 
