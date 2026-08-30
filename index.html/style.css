@@ -21,13 +21,6 @@ body{
 
 }
 
-/* layout for button rows: grid on large screens (3 columns), switches to flex on smaller screens */
-.container > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    align-items: center;
-}
 
 input{
     width: 100%;
@@ -52,6 +45,7 @@ button{
     border: none;
     font-size: 20px;
     justify-items: center;
+    display:flex;
 }
 .equal{
     background-color: rgb(227, 76, 16);
@@ -74,21 +68,7 @@ button{
         padding: 12px;
     }
 
-    /* switch to flex layout on smaller screens */
-    .container > div {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: space-between;
-    }
 
-    button {
-        width: calc(33.333% - 8px); /* three buttons per row */
-        height: 55px;
-        margin: 0;
-        font-size: 18px;
-    }
-}
 
 /* Media Query for Mobile Phones (480px and below) */
 @media (max-width: 480px) {
@@ -108,14 +88,6 @@ button{
         font-size: 28px;
         padding: 10px;
         margin-bottom: 8px;
-    }
-
-    /* keep flex layout and slightly smaller buttons on very small screens */
-    .container > div {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        justify-content: space-between;
     }
 
     button {
